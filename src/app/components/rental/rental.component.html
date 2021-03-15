@@ -2,20 +2,27 @@
     <thead>
       <tr>
         <!-- <th scope="col">Id</th> -->
-        <th scope="col">Rent Id</th>
-        <th scope="col">Car Id</th>
-        <th scope="col">Customer Id</th>
-        <th scope="col">Rent Date</th>
-        <th scope="col">Return Date</th>
+        <th>Id</th>
+        <th>Company Name</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Kiralama Tarihi</th>
+        <th>Teslim Tarihi</th>
       </tr>
     </thead>
     <tr *ngFor="let rental of rentals">
         <!-- <td >{{rental.Id}}</td> -->
-        <td>{{rental.rentId}}</td>
         <td>{{rental.carId}}</td>
-        <td>{{rental.customerId}}</td>
+        <td>{{rental.companyName}}</td>
+        <!-- <td>{{rental.customerId}}</td> -->
+        <!-- <td>{{rental.userId}}</td > --> 
+        
+        <td>{{rental.firstName}}</td>
+        <td>{{rental.lastName}}</td>
+        <!-- <td>{{rental.email}}</td> -->
+        <!-- <td>{{rental.password}}</td> -->
         <td>{{rental.rentDate}}</td>
         <td>{{rental.returnDate}}</td>
-    </tr>
+    </tr> 
    
   </table>

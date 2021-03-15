@@ -5,7 +5,7 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>Brand Id</th>
+        <th>Brand Name</th>
         <th>Color Id</th>
         <th>modelYear</th>
         <th>dailyPrice</th>
@@ -14,8 +14,8 @@
     </thead>
     <tr *ngFor="let car of cars">
         <td>{{ car.carId }}</td>
-        <td>{{ car.brandId }}</td>
-        <td>{{ car.colorId }}</td>
+        <td>{{ car.brandName }}</td>
+        <td>{{ car.colorName }}</td> 
         <td>{{ car.modelYear }}</td>
         <td>{{ car.dailyPrice }}</td>
         <td>{{ car.description }}</td>
