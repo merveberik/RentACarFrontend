@@ -7,10 +7,8 @@ import { BrandResponseModel } from '../models/brandResponseModel';
   providedIn: 'root'
 })
 export class BrandService {
-
-  apiUrl = "https://localhost:44385/api/brands/getall";
-
-  constructor(private httpClient: HttpClient) { }
+  apiUrl="https://localhost:44385/api/brands/getall";
+  constructor(private httpClient:HttpClient) { }
 
   getBrands():Observable<BrandResponseModel>{
     return this.httpClient.get<BrandResponseModel>(this.apiUrl)
