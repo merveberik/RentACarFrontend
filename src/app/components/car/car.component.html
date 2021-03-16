@@ -1,14 +1,14 @@
-<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+<!-- <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
   <table *ngIf="dataLoaded==true" class="table">
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Brand Name</th>
-        <th>Color Id</th>
-        <th>modelYear</th>
-        <th>dailyPrice</th>
+        <th>Araç Id</th>
+        <th>Marka</th>
+        <th>Renk Id</th>
+        <th>Model</th>
+        <th>Günlük Ücret</th>
         <th>description</th>
       </tr>
     </thead>
@@ -20,4 +20,15 @@
         <td>{{ car.dailyPrice }}</td>
         <td>{{ car.description }}</td>
     </tr>
-  </table>
+  </table> -->
+
+  <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div *ngFor="let car of cars" class="card" style="width: 18rem; display:inline-block; margin-left:10px; margin-bottom: 10px;">
+    <div class="card-body">
+      <h5 class="card-title">{{car.brandName}}</h5>
+      <p class="card-text">Günlük Ücreti : {{car.dailyPrice}}<br>Model Yılı : {{car.modelYear}}<br>Açıklama : {{car.description}}</p>
+      <a routerLink="/cars/getCarDetails/{{car.carId}}"  >Araç Detayları</a>
+    </div>
+  </div>

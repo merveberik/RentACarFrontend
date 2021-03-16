@@ -1,13 +1,9 @@
 <div class="col-md-6">
   <table class="table table-success table-striped">
-      <thead>
-          <tr>
-              <th>Id</th>
-              <th>Color</th>
-          </tr>
-      </thead>
-      <tr *ngFor="let color of colors">
-          <td>{{color.colorName}}</td>
-      </tr>
+    <li [class]="getAllColorClass()" routerLink="/cars/">Renkler</li>
+    <li (click)="setCurrentColor(color)" 
+    routerLink = "/cars/color/{{color.colorId}}"
+    *ngFor="let color of colors" 
+    [class]="getCurrentColorClass(color)" >{{color.colorName}}</li>
   </table>
 </div>
